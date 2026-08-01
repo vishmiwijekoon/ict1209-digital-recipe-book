@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Browse Recipes</title>
+<title>Recipes - Diary of Taste</title>
 <meta name="description" content="Find recipes by name or category.">
 <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Bootstrap 5 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +25,8 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg site-navbar sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <span class="brand-mark">D</span> Diary of Taste
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.png" alt="Diary of Taste Logo" class="navbar-logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +35,7 @@
       <ul class="navbar-nav mx-auto text-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="recipes.html">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
       <a href="login.html" class="btn-login ms-lg-3 mt-3 mt-lg-0 d-inline-block text-center">Login</a>
@@ -82,7 +83,7 @@
         <div class="recipe-body">
           <h3>Golden Buttermilk Pancakes</h3>
           <p>Fluffy stacks with a crisp edge, finished with warm maple syrup and toasted butter.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -95,20 +96,20 @@
         <div class="recipe-body">
           <h3>Sparkling Citrus Cooler</h3>
           <p>A refreshing blend of fresh orange, lime, and mint over ice — perfect for warm afternoons.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Lunch" data-name="Roasted Veggie Grain Bowl">
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Dinner" data-name="Vegetable Fried Rice">
       <div class="recipe-card">
-        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop');">
-          <span class="badge-tag">Lunch</span>
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop');">
+          <span class="badge-tag">Dinner</span>
         </div>
         <div class="recipe-body">
-          <h3>Roasted Veggie Grain Bowl</h3>
-          <p>Charred seasonal vegetables over herbed grains with a bright lemon-tahini drizzle.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <h3>Vegetable Fried Rice</h3>
+          <p>A quick, savory, and adaptable dish perfect for utilizing leftover rice and seasonal vegetables.</p>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -121,7 +122,7 @@
         <div class="recipe-body">
           <h3>Salted Caramel Brownies</h3>
           <p>Fudgy dark chocolate brownies swirled with salted caramel and a flaky sea salt finish.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -134,7 +135,7 @@
         <div class="recipe-body">
           <h3>Overnight Oats with Figs</h3>
           <p>Creamy oats soaked overnight, layered with fresh figs, honey, and toasted walnuts.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -147,7 +148,7 @@
         <div class="recipe-body">
           <h3>Herb-Roasted Chicken Traybake</h3>
           <p>One-pan roast chicken with baby potatoes and seasonal vegetables in garlic herb butter.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -161,7 +162,7 @@
         <div class="recipe-body">
           <h3>Iced Matcha Latte</h3>
           <p>Whisked ceremonial matcha over oat milk and ice, lightly sweetened with maple syrup.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -174,7 +175,7 @@
         <div class="recipe-body">
           <h3>Mediterranean Chickpea Salad</h3>
           <p>Chickpeas, cucumber, and feta tossed in a lemon-oregano dressing with crusty bread.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -187,7 +188,7 @@
         <div class="recipe-body">
           <h3>Classic Tiramisu</h3>
           <p>Espresso-soaked ladyfingers layered with mascarpone cream and a dusting of cocoa.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -210,8 +211,8 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-6 col-lg-3">
-        <a class="navbar-brand mb-2 d-inline-flex" href="index.html">
-          <span class="brand-mark">D</span> iary of Taste
+        <a class="navbar-brand mb-2 d-inline-flex align-items-center" href="index.html">
+          <img src="images/logo.png" alt="Diary of Taste Logo" class="navbar-logo">
         </a>
         <p class="text-muted small mb-0">Discover Delicious Recipes, one home kitchen at a time.</p>
       </div>
@@ -252,7 +253,6 @@
 
 <!-- Bootstrap JS bundle -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
-<script src="recipes.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -42,7 +42,7 @@ a {
 
 a:hover {
   color: var(--ink);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .eyebrow {
@@ -364,7 +364,7 @@ input:focus-visible {
 /* About */
 .about {
   background: white;
-  color: var(--cream);
+  color: var(--ink);
   border: 1px solid var(--line);
   border-radius: 5px;
   padding: 3.5rem 2rem;
@@ -380,6 +380,38 @@ input:focus-visible {
   background: radial-gradient(circle at 50% 50%, rgba(85, 85, 84, 0.18), transparent 60%);
 }
 
+@keyframes floatAnimation {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-20px) rotate(15deg) scale(1.05); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(35px);
+  z-index: 0;
+  animation: floatAnimation 8s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 180px;
+  height: 180px;
+  background: rgba(240, 194, 75, 0.35); /* paprika color */
+  top: -30px;
+  left: -30px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 220px;
+  height: 220px;
+  background: rgba(43, 7, 2, 0.15); /* maroon color */
+  bottom: -40px;
+  right: -30px;
+  animation-delay: 4s;
+}
+
 .about h2 {
   color: black;
 }
@@ -389,25 +421,6 @@ input:focus-visible {
   margin: 0 auto 0.4rem;
   color: rgba(14, 13, 13, 0.85);
   position: relative;
-}
-
-.about.btn-browse {
-  margin-top: 1.6rem;
-  background: var(--paprika);
-  color: var(--ink);
-  border: 1px solid black;
-  border-radius: 999px;
-  padding: 0.7rem 1.6rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-}
-
-.about .btn-browse:hover {
-  background: black;
-  color: var(--ink);
 }
 
 /* ---------------- Footer ---------------- */

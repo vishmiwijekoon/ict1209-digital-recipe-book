@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diary of Taste</title>
+<title>Home - Diary of Taste</title>
 <meta name="description" content="Find your next favourite meal from our recipe collection.">
 <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Roboto+Slab:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 
 <!-- Bootstrap 5 -->
@@ -28,7 +28,7 @@
 <nav class="navbar navbar-expand-lg site-navbar sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="/images/logo.png" alt="Diary of Taste Logo" class="navbar-logo">
+      <img src="images/logo.png" alt="Diary of Taste Logo" class="navbar-logo">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,9 +39,9 @@
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto text-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="recipes.html">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
 
@@ -124,7 +124,7 @@
 <section class="container my-5" id="featured">
   <div class="section-heading">
     <h2>Featured Recipes</h2>
-    <a href="recipes.html" class="view-all">View All &rarr;</a>
+    <a href="recipes.html" class="view-all">View All</a>
   </div>
   <div class="row g-4">
 
@@ -136,7 +136,7 @@
         <div class="recipe-body">
           <h3>Golden Buttermilk Pancakes</h3>
           <p>Fluffy stacks with a crisp edge, finished with warm maple syrup and toasted butter.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -149,20 +149,20 @@
         <div class="recipe-body">
           <h3>Sparkling Citrus Cooler</h3>
           <p>A refreshing blend of fresh orange, lime, and mint over ice — perfect for warm afternoons.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
 
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="recipe-card" data-category="Lunch">
-        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop');">
-          <span class="badge-tag">Lunch</span>
+      <div class="recipe-card" data-category="Dinner">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop');">
+          <span class="badge-tag">Dinner</span>
         </div>
         <div class="recipe-body">
-          <h3>Roasted Veggie Grain Bowl</h3>
-          <p>Charred seasonal vegetables over herbed grains with a bright lemon-tahini drizzle.</p>
-          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+          <h3>Vegetable Fried Rice</h3>
+          <p>A quick, savory, and adaptable dish perfect for utilizing leftover rice and seasonal vegetables.</p>
+          <a href="recipe-details.html" class="btn-outline-recipe">View Recipe</a>
         </div>
       </div>
     </div>
@@ -173,10 +173,14 @@
 <!--  ABOUT -->
 <section class="container my-5">
   <div class="about">
-    <p class="eyebrow" style="color:var(--butter);">Our story</p>
-    <h2>About Diary of Taste</h2>
-    <p>We're a small kitchen-table community collecting recipes worth repeating — tested, tasted, and passed on the way good food always has been: from one cook to the next.</p>
-    <a href="recipes.html" class="btn-browse">Browse Recipes <i class="bi bi-arrow-right"></i></a>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="about-content" style="position: relative; z-index: 1;">
+      <p class="eyebrow">Our story</p>
+      <h2>About Diary of Taste</h2>
+      <p class="mb-4">We're a small kitchen-table community collecting recipes worth repeating — tested, tasted, and passed on the way good food always has been: from one cook to the next.</p>
+      <a href="recipes.html" class="btn-outline-recipe">Browse Recipes</a>
+    </div>
   </div>
 </section>
 
@@ -185,8 +189,8 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-6 col-lg-3">
-        <a class="navbar-brand mb-2 d-inline-flex" href="index.html">
-          <span class="brand-mark">D</span>iary of Taste
+        <a class="navbar-brand mb-2 d-inline-flex align-items-center" href="index.html">
+          <img src="images/logo.png" alt="Diary of Taste Logo" class="navbar-logo">
         </a>
         <p class="text-muted small mb-0">Discover Delicious Recipes, one home kitchen at a time.</p>
       </div>
@@ -227,6 +231,6 @@
 
 <!-- Bootstrap JS bundle -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
