@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<meta name="description" content="Have questions or suggestions? Get in touch with Diary of Taste.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Site styles -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--  NAVBAR -->
+<nav class="navbar navbar-expand-lg site-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark">D</span> Diary of Taste
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+      <a href="login.html" class="btn-login ms-lg-3 mt-3 mt-lg-0 d-inline-block text-center">Login</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+
+  <!--  HERO BAND  -->
+  <section class="contact-hero mb-5">
+    <h1>Contact Us</h1>
+    <p>Have questions or suggestions? We'd love to hear from you.</p>
+    <p>Fill out the form below or reach out via our contact details.</p>
+  </section>
+
+  <!-- FORM + CONTACT INFO  -->
+  <div class="row g-4 mb-5">
+
+    <div class="col-lg-8">
+      <div class="contact-panel">
+        <h2>Send a Message</h2>
+        <form id="contact-form" novalidate>
+
+          <label class="form-label-custom" for="contact-name">Name</label>
+          <input type="text" id="contact-name" class="form-control-custom" placeholder="Enter your name">
+          <div class="form-feedback" id="name-feedback"></div>
+
+          <label class="form-label-custom" for="contact-email">Email</label>
+          <input type="email" id="contact-email" class="form-control-custom" placeholder="Enter your email">
+          <div class="form-feedback" id="email-feedback"></div>
+
+          <label class="form-label-custom" for="contact-message">Message</label>
+          <textarea id="contact-message" class="form-control-custom" placeholder="Enter your message"></textarea>
+          <div class="form-feedback" id="message-feedback"></div>
+
+          <button type="submit" class="btn-send" id="contact-submit">Send Message</button>
+          <div class="form-feedback" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="contact-info-card">
+        <h2>Contact Information</h2>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon"><i class="bi bi-envelope"></i></span>
+          <div>
+            <h6>Email</h6>
+            <p>hello@cookathome.com</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon"><i class="bi bi-telephone"></i></span>
+          <div>
+            <h6>Phone</h6>
+            <p>+94 715 655 2174</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon"><i class="bi bi-geo-alt"></i></span>
+          <div>
+            <h6>Location</h6>
+            <p>Rajarata University of Sri Lanka, Mihinthale</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--  COMMON QUESTIONS -->
+  <section class="faq-panel">
+    <div class="section-heading">
+      <h2>Common Questions</h2>
+    </div>
+    <div class="row g-3">
+
+      <div class="col-md-4">
+        <div class="faq-item">
+          <button class="faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+            How can I add a recipe?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse show" id="faq1">
+            <p class="faq-answer">Currently, only authorized researchers can submit recipes via the internal portal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="faq-item">
+          <button class="faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            Do you cater for allergies?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse" id="faq2">
+            <p class="faq-answer">Most recipes list common allergens, and many include suggested substitutions for dairy, gluten, and nuts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="faq-item">
+          <button class="faq-question" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            Can I republish a recipe?
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse" id="faq3">
+            <p class="faq-answer">You're welcome to share a link back to the original recipe — please reach out first if you'd like to reprint it in full.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!--  FOOTER  -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3">
+        <a class="navbar-brand mb-2 d-inline-flex" href="index.html">
+          <span class="brand-mark">D</span> iary of Taste
+        </a>
+        <p class="text-muted small mb-0">Discover Delicious Recipes, one home kitchen at a time.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Follow Us</h6>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Subscribe</h6>
+        <form id="subscribe-form" class="footer-subscribe d-flex" novalidate>
+          <label for="subscribe-input" class="visually-hidden">Enter your email</label>
+          <input type="email" id="subscribe-input" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div id="subscribe-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      &copy; 2026 Diary of Taste. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

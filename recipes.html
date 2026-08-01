@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Recipes</title>
+<meta name="description" content="Find recipes by name or category.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Site styles -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg site-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-mark">D</span> Diary of Taste
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recipes.html">Recipes</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <a href="login.html" class="btn-login ms-lg-3 mt-3 mt-lg-0 d-inline-block text-center">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER  -->
+<header class="page-header">
+  <div class="container">
+    <h1>Browse Recipes</h1>
+    <p>Find recipes by name or category</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!--  SEARCH + FILTERS -->
+  <div class="recipe-toolbar">
+    <form class="recipe-search" id="recipe-search-form" novalidate>
+      <span class="search-icon"><i class="bi bi-search"></i></span>
+      <label for="recipe-search-input" class="visually-hidden">Search by recipe name</label>
+      <input type="text" id="recipe-search-input" placeholder="Search by recipe name" autocomplete="off">
+    </form>
+    <button type="submit" form="recipe-search-form" class="btn-search">Search</button>
+
+    <div class="filter-chips" id="filter-chips" role="group" aria-label="Filter recipes by category">
+      <button type="button" class="chip active" data-filter="all">All</button>
+      <button type="button" class="chip" data-filter="Breakfast">Breakfast</button>
+      <button type="button" class="chip" data-filter="Lunch">Lunch</button>
+      <button type="button" class="chip" data-filter="Dinner">Dinner</button>
+      <button type="button" class="chip" data-filter="Desserts">Desserts</button>
+      <button type="button" class="chip" data-filter="Drinks">Drinks</button>
+    </div>
+  </div>
+
+  <!--  RECIPE GRID  -->
+  <div class="row g-4" id="recipe-grid">
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Breakfast" data-name="Golden Buttermilk Pancakes">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Breakfast</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Golden Buttermilk Pancakes</h3>
+          <p>Fluffy stacks with a crisp edge, finished with warm maple syrup and toasted butter.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Drinks" data-name="Sparkling Citrus Cooler">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Drinks</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Sparkling Citrus Cooler</h3>
+          <p>A refreshing blend of fresh orange, lime, and mint over ice — perfect for warm afternoons.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Lunch" data-name="Roasted Veggie Grain Bowl">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Lunch</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Roasted Veggie Grain Bowl</h3>
+          <p>Charred seasonal vegetables over herbed grains with a bright lemon-tahini drizzle.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Desserts" data-name="Salted Caramel Brownies">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Desserts</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Salted Caramel Brownies</h3>
+          <p>Fudgy dark chocolate brownies swirled with salted caramel and a flaky sea salt finish.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Breakfast" data-name="Overnight Oats with Figs">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1517673132405-a56a62b18caf?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Breakfast</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Overnight Oats with Figs</h3>
+          <p>Creamy oats soaked overnight, layered with fresh figs, honey, and toasted walnuts.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item" data-category="Dinner" data-name="Herb-Roasted Chicken Traybake">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Dinner</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Herb-Roasted Chicken Traybake</h3>
+          <p>One-pan roast chicken with baby potatoes and seasonal vegetables in garlic herb butter.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extra recipes revealed by "Load More" -->
+    <div class="col-12 col-md-6 col-lg-4 recipe-item is-hidden" data-category="Drinks" data-name="Iced Matcha Latte" data-extra="true">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Drinks</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Iced Matcha Latte</h3>
+          <p>Whisked ceremonial matcha over oat milk and ice, lightly sweetened with maple syrup.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item is-hidden" data-category="Lunch" data-name="Mediterranean Chickpea Salad" data-extra="true">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Lunch</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Mediterranean Chickpea Salad</h3>
+          <p>Chickpeas, cucumber, and feta tossed in a lemon-oregano dressing with crusty bread.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 recipe-item is-hidden" data-category="Desserts" data-name="Classic Tiramisu" data-extra="true">
+      <div class="recipe-card">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Desserts</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Classic Tiramisu</h3>
+          <p>Espresso-soaked ladyfingers layered with mascarpone cream and a dusting of cocoa.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="no-results" id="no-results">No recipes match your search. Try a different name or category.</p>
+
+  <!-- LOAD MORE -->
+  <div class="load-more-wrap">
+    <button type="button" class="btn-load-more" id="load-more-btn">
+      <i class="bi bi-arrow-clockwise"></i> Load More Recipes
+    </button>
+  </div>
+
+</main>
+
+<!--  FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3">
+        <a class="navbar-brand mb-2 d-inline-flex" href="index.html">
+          <span class="brand-mark">D</span> iary of Taste
+        </a>
+        <p class="text-muted small mb-0">Discover Delicious Recipes, one home kitchen at a time.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Follow Us</h6>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Subscribe</h6>
+        <form id="subscribe-form" class="footer-subscribe d-flex" novalidate>
+          <label for="subscribe-input" class="visually-hidden">Enter your email</label>
+          <input type="email" id="subscribe-input" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div id="subscribe-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      &copy; 2026 Diary of Taste. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="recipes.js"></script>
+</body>
+</html>

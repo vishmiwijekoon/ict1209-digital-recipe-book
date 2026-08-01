@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diary of Taste</title>
-    <meta name="description" content="Find your favourite meal our recipe collection">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diary of Taste</title>
+<meta name="description" content="Find your next favourite meal from our recipe collection.">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+
+<!-- Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+ 
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
- <nav class="navbar navbar-expand-lg site-navbar sticky-top">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg site-navbar sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
       <span class="brand-mark">D</span> iary of Taste
@@ -27,5 +44,182 @@
     </div>
   </div>
 </nav>
+
+<!--  HERO  -->
+<header class="hero-section">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-6">
+        <div class="hero-copy">
+          <p class="eyebrow mb-2">Home cooking, curated</p>
+           <h1>Discover Delicious Recipes</h1>
+          <p class="lede">Find your next favourite meal from our curated collection.</p>
+          <form class="search-form" id="search-form" novalidate>
+             <label for="search-input" class="visually-hidden">Search recipes</label>
+             <input type="text" id="search-input" placeholder="Search recipes" autocomplete="off">
+          <button type="submit" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <div id="search-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+           </div>
+    </div>
+      <div class="col-lg-6">
+    <div class="hero-image">
+          <span class="hero-tag">This week: Summer Herb Bowls</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CATEGORIES -->
+<section class="container my-5" id="categories">
+  <div class="section-heading">
+    <h2>Recipe Categories</h2>
+  </div>
+  <div class="row g-3 row-cols-2 row-cols-md-5">
+    <div class="col">
+      <a href="#featured" class="category-card" data-category="Breakfast">
+        <span class="cat-icon"><i class="bi bi-egg-fried"></i></span>
+        <span class="cat-label">Breakfast</span>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#featured" class="category-card" data-category="Lunch">
+        <span class="cat-icon"><i class="bi bi-basket"></i></span>
+        <span class="cat-label">Lunch</span>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#featured" class="category-card" data-category="Dinner">
+        <span class="cat-icon"><i class="bi bi-egg-fried" style="transform:rotate(180deg);display:inline-block;"></i></span>
+        <span class="cat-label">Dinner</span>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#featured" class="category-card" data-category="Desserts">
+        <span class="cat-icon"><i class="bi bi-cake2"></i></span>
+        <span class="cat-label">Desserts</span>
+      </a>
+    </div>
+    <div class="col">
+      <a href="#featured" class="category-card" data-category="Drinks">
+        <span class="cat-icon"><i class="bi bi-cup-straw"></i></span>
+        <span class="cat-label">Drinks</span>
+      </a>
+    </div>
+  </div>
+  <p id="filter-notice" class="text-muted mt-3 mb-0" style="font-size:0.9rem;" aria-live="polite"></p>
+</section>
+
+<!--  FEATURED RECIPES -->
+<section class="container my-5" id="featured">
+  <div class="section-heading">
+    <h2>Featured Recipes</h2>
+    <a href="recipes.html" class="view-all">View All &rarr;</a>
+  </div>
+  <div class="row g-4">
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="recipe-card" data-category="Breakfast">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Breakfast</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Golden Buttermilk Pancakes</h3>
+          <p>Fluffy stacks with a crisp edge, finished with warm maple syrup and toasted butter.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="recipe-card" data-category="Drinks">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Drinks</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Sparkling Citrus Cooler</h3>
+          <p>A refreshing blend of fresh orange, lime, and mint over ice — perfect for warm afternoons.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="recipe-card" data-category="Lunch">
+        <div class="recipe-img" style="background-image:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop');">
+          <span class="badge-tag">Lunch</span>
+        </div>
+        <div class="recipe-body">
+          <h3>Roasted Veggie Grain Bowl</h3>
+          <p>Charred seasonal vegetables over herbed grains with a bright lemon-tahini drizzle.</p>
+          <a href="recipe-detail.html" class="btn-outline-recipe">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--  ABOUT -->
+<section class="container my-5">
+  <div class="about">
+    <p class="eyebrow" style="color:var(--butter);">Our story</p>
+    <h2>About Diary of Taste</h2>
+    <p>We're a small kitchen-table community collecting recipes worth repeating — tested, tasted, and passed on the way good food always has been: from one cook to the next.</p>
+    <a href="recipes.html" class="btn-browse">Browse Recipes <i class="bi bi-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- FOOTER  -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3">
+        <a class="navbar-brand mb-2 d-inline-flex" href="index.html">
+          <span class="brand-mark">D</span>iary of Taste
+        </a>
+        <p class="text-muted small mb-0">Discover Delicious Recipes, one home kitchen at a time.</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Follow Us</h6>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6>Subscribe</h6>
+        <form id="subscribe-form" class="footer-subscribe d-flex" novalidate>
+          <label for="subscribe-input" class="visually-hidden">Enter your email</label>
+          <input type="email" id="subscribe-input" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <div id="subscribe-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      &copy; 2026 Diary of Taste. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
