@@ -92,11 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   searchForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-
     const value = searchInput.value.trim();
 
     if (value.length === 0) {
+      e.preventDefault();
       if(searchFeedback) {
         searchFeedback.textContent = 'Type an ingredient or dish name to search.';
         searchFeedback.className = 'form-feedback error';
@@ -109,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       searchFeedback.textContent = `Searching for “${value}”…`;
       searchFeedback.className = 'form-feedback success';
     }
+    // Allow natural GET submission to recipes.php
   });
 
   // Newsletter validation
@@ -311,13 +311,12 @@ document.addEventListener('DOMContentLoaded', () => {
     messageInput.addEventListener('blur', () => validateMessage(true));
 
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
       const nameOk = validateName(true);
       const emailOk = validateEmail(true);
       const messageOk = validateMessage(true);
 
       if (!nameOk || !emailOk || !messageOk) {
+        e.preventDefault();
         if(formStatus) {
             formStatus.textContent =
               'Please fix the highlighted fields.';
@@ -326,21 +325,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      // If valid, show sending indicator and allow browser to POST to contact.php
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
-
-      setTimeout(() => {
-        if(formStatus) {
-            formStatus.textContent =
-              'Thanks! Your message has been sent.';
-            formStatus.className = 'form-feedback success';
-        }
-
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-
-        contactForm.reset();
-      }, 500);
     });
   }
 
