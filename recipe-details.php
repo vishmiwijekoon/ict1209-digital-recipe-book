@@ -157,10 +157,9 @@ require_once __DIR__ . '/includes/header.php';
           <p class="meta-value"><?= htmlspecialchars($recipe['author'] ?? 'Admin Chef') ?></p>
           <p class="meta-label">Date Added</p>
           <p class="meta-value"><?= date('F j, Y', strtotime($recipe['created_at'])) ?></p>
-          <p class="meta-label">Primary Category</p>
+          <p class="meta-label">Category</p>
           <p class="meta-value"><?= htmlspecialchars($recipe['category']) ?></p>
-          <p class="meta-label">Course Code</p>
-          <p class="meta-value">ICT 1209 - Mini Project</p>
+         
         </div>
       </div>
     </div>
